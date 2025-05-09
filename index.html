@@ -1,93 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Himanshi Shrivas | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himanshi Shrivas - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
+      font-family: 'Segoe UI', sans-serif;
       scroll-behavior: smooth;
     }
     .hero {
-      background-color: #f8f9fa;
-      padding: 80px 0;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: white;
+      padding: 100px 20px;
       text-align: center;
     }
-    .section-title {
-      text-align: center;
-      margin-bottom: 30px;
+    .section {
+      padding: 60px 20px;
     }
-    .contact-links a {
-      display: block;
-      margin-bottom: 10px;
+    .section:nth-child(even) {
+      background: #f9f9f9;
+    }
+    .project-card {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border: none;
+      border-radius: 1rem;
+    }
+    .footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    a {
+      color: #6e8efb;
     }
   </style>
 </head>
 <body>
+  <header class="hero">
+    <h1>Himanshi Shrivas</h1>
+    <p class="lead">Being an Explorer... L.I.F.E. - Learning Is First Entertainment!</p>
+  </header>
 
-  <section class="hero">
+  <section class="section" id="about">
     <div class="container">
-      <h1>Himanshi Shrivas</h1>
-      <p>Being an Explorer... L.I.F.E. - Learning Is First Entertainment!</p>
-      <p>Charlotte, NC | 📧 himanshishrvs0007@gmail.com | 📞 +1 (704) 293-1718</p>
-      <p>
-        🔗 <a href="https://www.linkedin.com/in/himanshi-shrivas-32054b170/" target="_blank">LinkedIn</a> |
-        🖥 <a href="https://github.com/darpan02-cypher" target="_blank">GitHub</a>
-      </p>
+      <h2 class="mb-4">About Me</h2>
+      <p>Software Engineer with over 3 years of experience in full-stack development, cloud computing, and DevOps practices. I am passionate about building scalable software and driving innovation in healthcare and AI-driven applications.</p>
     </div>
   </section>
 
-  <section class="py-5">
+  <section class="section bg-light" id="skills">
     <div class="container">
-      <h2 class="section-title">About</h2>
-      <p>
-        I'm a passionate Software Engineer with 3+ years of experience building scalable full-stack applications and cloud-native solutions. With a background in Computer Science and a current MS IT student at UNC Charlotte, I strive to deliver impactful software through innovation, learning, and collaboration. I love solving real-world problems—especially in healthcare—and turning ideas into products that make a difference.
-      </p>
-    </div>
-  </section>
-
-  <section class="bg-light py-5">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <ul>
-        <li><strong>Programming:</strong> Java, Python, SQL, JavaScript</li>
-        <li><strong>Frameworks:</strong> Spring Boot, Django, React, REST APIs</li>
-        <li><strong>Databases:</strong> MySQL, MongoDB, PostgreSQL</li>
-        <li><strong>DevOps/Cloud:</strong> AWS, Jenkins, Docker, Kubernetes, Harness</li>
-        <li><strong>Tools:</strong> Git, Tableau, Splunk, AppDynamics, Postman, SonarQube</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="py-5">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <ul>
-        <li><strong>Predictive Healthcare Passport:</strong> ML models predicting cardiovascular risk with 90%+ accuracy using XGBoost, Gradio-based frontend.</li>
-        <li><strong>OneHealth Network Portal:</strong> Multi-role healthcare platform with Django and MongoDB.</li>
-        <li><strong>Employee Performance Dashboard:</strong> KPI tracking via Tableau and Jira Analytics.</li>
-        <li><strong>Automated Deployment System:</strong> Jenkins + Harness CI/CD system reducing errors by 50%.</li>
-        <li><strong>Online Food Delivery App:</strong> Full-stack Spring Boot + React app with MySQL backend and Hibernate ORM.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="bg-light py-5">
-    <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <div class="contact-links">
-        <a href="mailto:himanshishrvs0007@gmail.com">📧 himanshishrvs0007@gmail.com</a>
-        <a href="https://www.linkedin.com/in/himanshi-shrivas-32054b170/" target="_blank">🔗 LinkedIn</a>
-        <a href="https://github.com/darpan02-cypher" target="_blank">🖥 GitHub</a>
-        <p>📞 +1 (704) 293-1718</p>
+      <h2 class="mb-4">Skills</h2>
+      <div class="row row-cols-2 row-cols-md-4 g-3">
+        <div class="col"><div class="card p-3">Java</div></div>
+        <div class="col"><div class="card p-3">Python</div></div>
+        <div class="col"><div class="card p-3">SQL</div></div>
+        <div class="col"><div class="card p-3">React</div></div>
+        <div class="col"><div class="card p-3">Spring Boot</div></div>
+        <div class="col"><div class="card p-3">Django</div></div>
+        <div class="col"><div class="card p-3">AWS</div></div>
+        <div class="col"><div class="card p-3">Jenkins</div></div>
       </div>
     </div>
   </section>
 
-  <footer class="text-center py-3">
-    <small>&copy; 2025 Himanshi Shrivas</small>
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="mb-4">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card project-card p-3">
+            <h5>Predictive Healthcare Passport</h5>
+            <p>ML models to predict cardiovascular risk (90%+ accuracy) with LLM-powered health suggestions.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card project-card p-3">
+            <h5>OneHealth Network Portal</h5>
+            <p>Healthcare portal with multi-role login and dynamic dashboards using Django and MongoDB.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card project-card p-3">
+            <h5>Employee Performance Dashboard</h5>
+            <p>Visualized sprint KPIs from Jira using Tableau for productivity tracking.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card project-card p-3">
+            <h5>Online Food Delivery App</h5>
+            <p>Built full-stack food app using Spring Boot, React, and MySQL with optimized queries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light" id="contact">
+    <div class="container">
+      <h2 class="mb-4">Contact</h2>
+      <p>Email: <a href="mailto:himanshishrvs0007@gmail.com">himanshishrvs0007@gmail.com</a></p>
+      <p>Phone: +1 (704) 293-1718</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/himanshi-shrivas-32054b170/" target="_blank">Profile</a></p>
+      <p>GitHub: <a href="https://github.com/darpan02-cypher" target="_blank">darpan02-cypher</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Himanshi Shrivas. All rights reserved.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
