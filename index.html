@@ -1,107 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Himanshi Shrivas - Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
+      background: #0f2027;  /* fallback */
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      color: #fff;
       scroll-behavior: smooth;
     }
-    .hero {
-      background: linear-gradient(135deg, #6e8efb, #a777e3);
-      color: white;
-      padding: 100px 20px;
+
+    a {
+      color: #00f2fe;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #4facfe;
+    }
+
+    .navbar {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+    }
+
+   
+
+    .hero p {
+      font-size: 1.4rem;
+      margin-top: 15px;
+    }
+
+    .section {
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    .section h2 {
+      margin-bottom: 40px;
       text-align: center;
     }
-    .section {
-      padding: 60px 20px;
-    }
+
     .section:nth-child(even) {
-      background: #f9f9f9;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
     }
-    .project-card {
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    .card, .project-card {
+      background: rgba(255, 255, 255, 0.1);
       border: none;
-      border-radius: 1rem;
-    }
-    .footer {
-      background-color: #343a40;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
       color: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover, .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0, 255, 255, 0.3);
+    }
+
+    .img-fluid {
+      border: 4px solid #00f2fe;
+    }
+
+    .footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #aaa;
       text-align: center;
       padding: 20px;
     }
-    a {
-      color: #6e8efb;
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #00f2fe;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 242, 254, 0.5);
+      transition: background 0.3s ease;
+    }
+
+    .back-to-top:hover {
+      background: #4facfe;
+    }
+
+    .animated-skill {
+      text-align: center;
+      padding: 15px;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .animated-skill:hover {
+      transform: scale(1.05);
+      background: rgba(0, 255, 255, 0.1);
+    }
+
+    .animated-skill::after {
+      content: "✨";
+      display: block;
+      font-size: 1.2rem;
+      opacity: 0.6;
+      margin-top: 5px;
+    }
+
+    
+    
+    .about-card, .about-card .card-img-overlay {
+      z-index: 2;
     }
   </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>Himanshi Shrivas</h1>
-    <p class="lead">Being an Explorer... L.I.F.E. - Learning Is First Entertainment!</p>
-  </header>
 
-  <section class="section" id="about">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <h2 class="mb-4">About Me</h2>
-      <p>Software Engineer with over 3 years of experience in full-stack development, cloud computing, and DevOps practices. I am passionate about building scalable software and driving innovation in healthcare and AI-driven applications.</p>
+      <a class="navbar-brand" href="#">Himanshi Shrivas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  
+
+  <!-- About Section -->
+  <section class="section vh-100 d-flex align-items-center position-relative" id="about" style="background-size: cover; background-repeat: no-repeat; background-image: url('WhatsApp Image 2025-05-21 at 12.33.14.jpeg');">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+    <div class="container text-center text-white d-flex flex-column justify-content-end" style="z-index: 7; height: 100%;">
+      <h1 class="display-4 mb-3">Himanshi Shrivas</h1>
+      <p class="lead">Software Engineer with over 3 years of experience in full-stack development, cloud computing, and DevOps practices. Passionate about scalable software and innovation in healthcare and AI.</p>
     </div>
   </section>
+   
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
 
-  <section class="section bg-light" id="skills">
+  <!-- Skills Section -->
+  <section class="section" id="skills">
     <div class="container">
-      <h2 class="mb-4">Skills</h2>
-      <div class="row row-cols-2 row-cols-md-4 g-3">
-        <div class="col"><div class="card p-3">Java</div></div>
-        <div class="col"><div class="card p-3">Python</div></div>
-        <div class="col"><div class="card p-3">SQL</div></div>
-        <div class="col"><div class="card p-3">React</div></div>
-        <div class="col"><div class="card p-3">Spring Boot</div></div>
-        <div class="col"><div class="card p-3">Django</div></div>
-        <div class="col"><div class="card p-3">AWS</div></div>
-        <div class="col"><div class="card p-3">Jenkins</div></div>
+      <h2>Skills</h2>
+      <div class="row row-cols-2 row-cols-md-4 g-4">
+        <div class="col"><div class="animated-skill">Java</div></div>
+        <div class="col"><div class="animated-skill">Python</div></div>
+        <div class="col"><div class="animated-skill">SQL</div></div>
+        <div class="col"><div class="animated-skill">React</div></div>
+        <div class="col"><div class="animated-skill">Spring Boot</div></div>
+        <div class="col"><div class="animated-skill">Django</div></div>
+        <div class="col"><div class="animated-skill">AWS</div></div>
+        <div class="col"><div class="animated-skill">Jenkins</div></div>
       </div>
     </div>
   </section>
 
+  <!-- Projects Section -->
   <section class="section" id="projects">
     <div class="container">
-      <h2 class="mb-4">Projects</h2>
+      <h2>Projects</h2>
       <div class="row g-4">
         <div class="col-md-6">
-          <div class="card project-card p-3">
+          <div class="project-card p-4">
             <h5>Predictive Healthcare Passport</h5>
-            <p>ML models to predict cardiovascular risk (90%+ accuracy) with LLM-powered health suggestions.</p>
+            <p>ML models predicting cardiovascular risks (90%+ accuracy) with LLM-based health insights.</p>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="card project-card p-3">
+          <div class="project-card p-4">
             <h5>OneHealth Network Portal</h5>
-            <p>Healthcare portal with multi-role login and dynamic dashboards using Django and MongoDB.</p>
+            <p>Healthcare portal with multi-role login and dynamic dashboards using Django + MongoDB.</p>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="card project-card p-3">
+          <div class="project-card p-4">
             <h5>Employee Performance Dashboard</h5>
-            <p>Visualized sprint KPIs from Jira using Tableau for productivity tracking.</p>
+            <p>Interactive Tableau dashboard visualizing Jira-based KPIs and sprint metrics.</p>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="card project-card p-3">
+          <div class="project-card p-4">
             <h5>Online Food Delivery App</h5>
-            <p>Built full-stack food app using Spring Boot, React, and MySQL with optimized queries.</p>
+            <p>Full-stack Spring Boot + React food app with optimized backend APIs and MySQL.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section bg-light" id="contact">
+  <!-- Contact Section -->
+  <section class="section" id="contact">
     <div class="container">
-      <h2 class="mb-4">Contact</h2>
+      <h2>Contact</h2>
       <p>Email: <a href="mailto:himanshishrvs0007@gmail.com">himanshishrvs0007@gmail.com</a></p>
       <p>Phone: +1 (704) 293-1718</p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/himanshi-shrivas-32054b170/" target="_blank">Profile</a></p>
@@ -109,9 +228,13 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <p>© 2025 Himanshi Shrivas. All rights reserved.</p>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
