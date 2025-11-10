@@ -92,15 +92,16 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(15, 32, 39, 0.9), rgba(32, 58, 67, 0.85), rgba(44, 83, 100, 0.9));
+      background: linear-gradient(135deg, rgba(15, 32, 39, 0.7), rgba(32, 58, 67, 0.65), rgba(44, 83, 100, 0.7));
       z-index: 1;
     }
 
     .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      animation: fadeInUp 1s ease;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+  margin-top: 400px; /* Further increased space above hero-content */
     }
 
     @keyframes fadeInUp {
@@ -596,7 +597,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="#">HS</a>
+      <a class="navbar-brand" href="#">HIMANSHI SHRIVAS</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -614,9 +615,10 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section" id="home">
+  <section class="hero-section" id="home" >
     <div class="hero-overlay"></div>
-    <div class="hero-content container">
+    <div class="hero-content" >
+
       <h1>Himanshi Shrivas</h1>
       <p class="tagline">Software Engineer & Full-Stack Developer</p>
       <p class="subtitle">Results-driven engineer with 3+ years of experience building scalable, high-performance applications using Java, Spring Boot, and cloud-native architectures. Passionate about innovation in healthcare, AI, and distributed systems.</p>
@@ -628,11 +630,19 @@
         </div>
         <div class="stat-item">
           <span class="stat-number">15+</span>
-          <span class="stat-label">Projects Delivered</span>
+          <span class="stat-label">Projects Worked</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number">90%</span>
-          <span class="stat-label">ML Model Accuracy</span>
+          <span class="stat-number">100+</span>
+          <span class="stat-label">Students Mentored</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">15%</span>
+          <span class="stat-label">Reduced Deployment Errors</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">12%</span>
+          <span class="stat-label">Improved Resource Allocation</span>
         </div>
       </div>
 
@@ -640,8 +650,10 @@
         <a href="#contact" class="btn btn-custom">Get In Touch</a>
         <a href="#projects" class="btn btn-custom">View Projects</a>
       </div>
-    </div>
-  </section>
+        </div>
+      </section>
+
+ 
 
   <!-- Experience Section -->
   <section class="section" id="experience">
@@ -711,33 +723,92 @@
       <p class="section-subtitle">Comprehensive expertise across modern development stacks and cloud technologies</p>
       
       <div class="skills-grid">
-        <div class="skill-card"><span>Java</span></div>
-        <div class="skill-card"><span>Python</span></div>
-        <div class="skill-card"><span>SQL</span></div>
-        <div class="skill-card"><span>JavaScript</span></div>
-        <div class="skill-card"><span>Spring Boot</span></div>
-        <div class="skill-card"><span>Django</span></div>
-        <div class="skill-card"><span>React</span></div>
-        <div class="skill-card"><span>REST APIs</span></div>
-        <div class="skill-card"><span>MySQL</span></div>
-        <div class="skill-card"><span>MongoDB</span></div>
-        <div class="skill-card"><span>PostgreSQL</span></div>
-        <div class="skill-card"><span>AWS</span></div>
-        <div class="skill-card"><span>Jenkins</span></div>
-        <div class="skill-card"><span>Docker</span></div>
-        <div class="skill-card"><span>Kubernetes</span></div>
-        <div class="skill-card"><span>Harness</span></div>
-        <div class="skill-card"><span>Git</span></div>
-        <div class="skill-card"><span>Tableau</span></div>
-        <div class="skill-card"><span>Splunk</span></div>
-        <div class="skill-card"><span>AppDynamics</span></div>
-        <div class="skill-card"><span>Postman</span></div>
-        <div class="skill-card"><span>SonarQube</span></div>
-        <div class="skill-card"><span>Databricks</span></div>
-        <div class="skill-card"><span>IBM Watson</span></div>
+        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
+          <span>Java</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
+          <span>Python</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
+          <span>SQL</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
+          <span>Spring Boot</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
+          <span>Django</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
+          <span>React</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
+          <span>REST APIs</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
+          <span>MySQL</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
+          <span>MongoDB</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
+          <span>PostgreSQL</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
+          <span>AWS</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
+          <span>Jenkins</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
+          <span>Docker</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
+          <span>Kubernetes</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
+          <span>Harness</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
+          <span>Git</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
+          <span>Tableau</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
+          <span>Splunk</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
+          <span>AppDynamics</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
+          <span>Postman</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
+          <span>SonarQube</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
+          <span>Databricks</span>
+        </div>
+        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
+          <span>IBM Watson</span>
+        </div>
       </div>
     </div>
   </section>
+
+  <style>
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 3px #00f2fe, 0 0 6px #00f2fe, 0 0 10px #00f2fe;
+      }
+      100% {
+        box-shadow: 0 0 5px #4facfe, 0 0 10px #4facfe, 0 0 15px #4facfe;
+      }
+    }
+  </style>
 
   <!-- Projects Section -->
   <section class="section" id="projects">
@@ -778,17 +849,19 @@
           </div>
         </div>
 
+
         <div class="project-card">
-          <div class="project-title">Distributed Task Scheduler</div>
-          <p>Built distributed task scheduling system handling asynchronous jobs across worker nodes, improving throughput by 200%. Leveraged Redis as message queue for scalable, fault-tolerant processing with retries and idempotency.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Java</span>
-            <span class="tech-badge">Spring Boot</span>
-            <span class="tech-badge">Redis</span>
-            <span class="tech-badge">PostgreSQL</span>
-            <span class="tech-badge">Docker</span>
-          </div>
+          <div class="project-title">SchoolDaddy</div>
+            <p>Smart school management platform simplifying communication between teachers, students, and parents. Features attendance tracking, assignment management, and performance analytics for better academic engagement.</p>
+            <div class="project-tech">
+              <span class="tech-badge">Databricks</span>
+              <span class="tech-badge">Agentic AI System</span>
+              <span class="tech-badge">LLM</span>
+              <span class="tech-badge">RAG-Databrick</span>
+            </div>
         </div>
+
+    
 
         <div class="project-card">
           <div class="project-title">OneHealth Network Portal</div>
@@ -809,7 +882,34 @@
             <span class="tech-badge">MySQL</span>
           </div>
         </div>
+      
+
+       <div class="project-card">
+         <div class="project-title">MindMe AI</div>
+         <p>In Progress-AI-powered wellness platform that analyzes daily activities and physiological signals from wearables to predict mindfulness and mental wellness levels. Includes real-time feedback and personalized insights.</p>
+        <div class="project-tech">
+          <span class="tech-badge">Embedded learning</span>
+          <span class="tech-badge">TensorFlow</span>
+          <span class="tech-badge">Python</span>
+        
+        </div>
       </div>
+
+          <div class="project-card">
+          <div class="project-title">Distributed Task Scheduler</div>
+          <p>Intial Stages- Planned distributed task scheduling system handling asynchronous jobs across worker nodes, improving throughput by 200%. Leveraged Redis as message queue for scalable, fault-tolerant processing with retries and idempotency.</p>
+          <div class="project-tech">
+            <span class="tech-badge">Java</span>
+            <span class="tech-badge">Spring Boot</span>
+            <span class="tech-badge">Redis</span>
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">Docker</span>
+          </div>
+        </div>
+    </div>
+
+
+
     </div>
   </section>
 
@@ -940,13 +1040,56 @@
       <p class="section-subtitle">Academic foundation in computer science and information technology</p>
       
       <div class="row">
-        <div class="col-md-6">
-          <div class="achievement-card" style="border-left-color: #00f2fe;">
-            <div class="achievement-title" style="color: #00f2fe;">🎓 Master of Science in Information Technology</div>
-            <p><strong>University of North Carolina at Charlotte</strong><br>
-            Charlotte, NC | Jan 2025 – Dec 2026<br>
-            Focus: Advanced software engineering, cloud computing, and data analytics</p>
+        <div class="col-md-6 d-flex">
+          <div class="achievement-card flex-fill" style="border-left-color: #00f2fe;">
+        <div class="achievement-title" style="color: #00f2fe;">🎓 Master of Science in Information Technology</div>
+        <p><strong>University of North Carolina at Charlotte</strong><br>
+        Charlotte, NC | Jan 2025 – Dec 2026<br>
+        Focus: Advanced software engineering, cloud computing, and data analytics</p>
           </div>
         </div>
-        
-        <div
+        <div class="col-md-6">
+          <div class="achievement-card" style="border-left-color: #00f2fe;">
+        <div class="achievement-title" style="color: #00f2fe;">🎓 Bachelor of Technology in Computer Science</div>
+        <p><strong>Shri Vaishnav Vidyapeeth Vishwavidyalaya</strong><br>
+        Indore, India | Jul 2017 – Aug 2021<br>
+        Focus: Computer Science, Specialization in Big Data Analytics in collaboration by IBM</p>
+          </div>
+        </div>
+      </div>
+      <section class="section" id="contact">
+        <div class="container">
+          <h2>Get In Touch</h2>
+          <p class="section-subtitle">Feel free to reach out for collaborations or inquiries</p>
+          
+          <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <div class="contact-label">Phone</div>
+          <div class="contact-value">7042931718</div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:hshrivas0007@gmail.com">hshrivas0007@gmail.com</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🐱‍💻</div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value"><a href="https://github.com/darpan02-cypher" target="_blank">github.com/darpan02-cypher</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🔗</div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value"><a href="https://www.linkedin.com/in/himanshishrivas" target="_blank">linkedin.com/in/himanshishrivas</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📝</div>
+          <div class="contact-label">Medium</div>
+          <div class="contact-value"><a href="https://medium.com/@himanshishrvs0007" target="_blank">medium.com/@himanshishrvs0007</a></div>
+        </div>
+      </div>
+        </div>
+      </section>
+    </div>
+  </section>
