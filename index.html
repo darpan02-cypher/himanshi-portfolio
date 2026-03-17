@@ -590,6 +590,157 @@
         font-size: 2rem;
       }
     }
+
+    /* Chat Widget Styles */
+    .chat-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(45deg, #00f2fe, #4facfe);
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 5px 25px rgba(0, 242, 254, 0.4);
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    .chat-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 35px rgba(0, 242, 254, 0.6);
+    }
+
+    .chat-modal {
+      display: none;
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 400px;
+      max-width: 90vw;
+      background: rgba(15, 32, 39, 0.98);
+      border: 2px solid #00f2fe;
+      border-radius: 15px;
+      box-shadow: 0 10px 50px rgba(0, 242, 254, 0.3);
+      z-index: 998;
+      animation: slideUp 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .chat-header {
+      background: linear-gradient(45deg, #00f2fe, #4facfe);
+      color: #000;
+      padding: 20px;
+      border-radius: 13px 13px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .chat-close {
+      background: none;
+      border: none;
+      color: #000;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .chat-close:hover {
+      transform: rotate(90deg);
+    }
+
+    .chat-body {
+      padding: 25px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .chat-body input,
+    .chat-body textarea {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid #00f2fe;
+      color: #fff;
+      padding: 12px 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .chat-body input::placeholder,
+    .chat-body textarea::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .chat-body input:focus,
+    .chat-body textarea:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #4facfe;
+      box-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+    }
+
+    .chat-body textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .chat-submit {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(45deg, #00f2fe, #4facfe);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .chat-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(0, 242, 254, 0.3);
+    }
+
+    .chat-submit:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .chat-message {
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      color: #00f2fe;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .chat-modal {
+        width: calc(100% - 40px);
+        bottom: 80px;
+        right: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1120,3 +1271,123 @@
       </section>
     </div>
   </section>
+
+  <!-- Chat Widget -->
+  <button class="chat-button" id="chatButton" title="Chat with me">💬</button>
+
+  <div class="chat-modal" id="chatModal">
+    <div class="chat-header">
+      <span>Hi there! 👋 Message me</span>
+      <button class="chat-close" id="chatClose">&times;</button>
+    </div>
+    <div class="chat-body">
+      <form id="chatForm" action="https://formspree.io/f/maqpprvn" method="POST">
+        <input type="text" name="name" id="userName" placeholder="Your name" autocomplete="name" required style="width: 100%;">
+        <input type="email" name="email" id="userEmail" placeholder="Your email" autocomplete="email" required style="width: 100%;">
+        <textarea name="message" id="userMessage" placeholder="What's on your mind? Ask me anything..." required></textarea>
+        <button type="submit" class="chat-submit">Send Message 🚀</button>
+        <div class="chat-message" id="chatStatus"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Chat Widget Functionality
+    const chatButton = document.getElementById('chatButton');
+    const chatModal = document.getElementById('chatModal');
+    const chatClose = document.getElementById('chatClose');
+    const chatForm = document.getElementById('chatForm');
+    const chatStatus = document.getElementById('chatStatus');
+
+    // Open chat modal
+    chatButton.addEventListener('click', () => {
+      chatModal.style.display = 'block';
+    });
+
+    // Close chat modal
+    chatClose.addEventListener('click', () => {
+      chatModal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+      if (e.target === chatModal) {
+        chatModal.style.display = 'none';
+      }
+    });
+
+    // Handle form submission with Formspree
+    chatForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitButton = chatForm.querySelector('.chat-submit');
+      const originalText = submitButton.textContent;
+      
+      // Update status
+      chatStatus.textContent = '📤 Sending...';
+      chatStatus.style.color = '#4facfe';
+      submitButton.disabled = true;
+
+      try {
+        const formData = new FormData(chatForm);
+        const response = await fetch('https://formspree.io/f/maqpprvn', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Success message
+          chatStatus.textContent = '✅ Message sent! I\'ll get back to you soon.';
+          chatStatus.style.color = '#00f2fe';
+          chatForm.reset();
+          submitButton.textContent = '✅ Sent!';
+
+          // Clear message after 3 seconds
+          setTimeout(() => {
+            chatStatus.textContent = '';
+            chatModal.style.display = 'none';
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+          }, 3000);
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        chatStatus.textContent = '❌ Error sending message. Please try again.';
+        chatStatus.style.color = '#ff6b6b';
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+      }
+    });
+
+    // Back to Top Button
+    const backToTopButton = document.getElementById('backToTop');
+    const mainNav = document.getElementById('mainNav');
+
+    if (backToTopButton && mainNav) {
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('visible');
+          mainNav.classList.add('scrolled');
+        } else {
+          backToTopButton.classList.remove('visible');
+          mainNav.classList.remove('scrolled');
+        }
+      });
+
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    console.log('✅ Chat widget loaded successfully with Formspree');
+  </script>
+</body>
+</html>
