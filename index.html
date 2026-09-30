@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Himanshi Shrivas - Portfolio</title>
+  <title>Himanshi Shrivas | Software Engineer – AI Agents & Distributed Systems</title>
+  <meta name="description" content="Software engineer building production AI agents and reliable distributed systems. 3+ years at Capgemini, now at Touio (Ginjer AI). MS IT, UNC Charlotte."/>
+  <meta property="og:title" content="Himanshi Shrivas – Software Engineer"/>
+  <meta property="og:description" content="Production AI agents and reliable distributed systems. 1st place IEEE Pitch Competition (Georgia Tech)."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="WhatsApp Image 2025-05-21 at 12.33.14.jpeg"/>
+  <meta name="theme-color" content="#0b0f14"/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0f14'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%235aa9ff'%3EHS%3C/text%3E%3C/svg%3E"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
@@ -771,6 +778,107 @@
         right: 20px;
       }
     }
+
+    /* ===== Redesign overrides ===== */
+    :root {
+      --bg: #0b0f14;
+      --surface: #121821;
+      --surface-2: #171e29;
+      --border: #222c3a;
+      --text: #e6edf3;
+      --muted: #8b98a5;
+      --accent: #5aa9ff;
+    }
+    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+    body { background: var(--bg); color: var(--text); font-family: 'Poppins', sans-serif; }
+    a { color: var(--accent); }
+    a:hover { color: #8cc4ff; transform: none; }
+    h2, .section h2 {
+      background: none; -webkit-text-fill-color: var(--text); color: var(--text);
+      font-size: 2.2rem; font-weight: 700; text-align: left; letter-spacing: -0.01em; margin-bottom: 10px;
+    }
+    .section h2::after { content: ''; display: block; width: 48px; height: 3px; background: var(--accent); margin-top: 12px; border-radius: 2px; }
+    .section-subtitle { text-align: left; margin: 0 0 40px; max-width: 640px; color: var(--muted); font-size: 1rem; }
+    .section { padding: 90px 20px; }
+    .section:nth-child(even) { background: transparent; }
+    .subhead, h3.subhead { color: var(--text); font-size: 1.3rem; font-weight: 600; text-align: left !important; margin: 56px 0 20px !important; }
+
+    /* Nav */
+    .navbar, .navbar.scrolled { background: rgba(11, 15, 20, 0.85); box-shadow: none; border-bottom: 1px solid var(--border); }
+    .navbar-brand { background: none; -webkit-text-fill-color: var(--text); color: var(--text); font-size: 1.15rem; font-weight: 600; }
+    .nav-link { font-size: 0.9rem; color: var(--muted) !important; }
+    .nav-link:hover { color: var(--text) !important; }
+    .nav-link::after { background: var(--accent); }
+    .nav-resume { display: inline-block; margin-left: 14px; padding: 7px 18px; border: 1px solid var(--accent); border-radius: 8px; color: var(--accent); font-size: 0.85rem; font-weight: 600; }
+    .nav-resume:hover { background: var(--accent); color: #06121f; }
+
+    /* Buttons */
+    .cta { display: inline-block; padding: 12px 26px; border-radius: 10px; font-weight: 600; font-size: 0.95rem; border: 1px solid var(--border); transition: background .2s, border-color .2s, color .2s; }
+    .cta-primary { background: var(--accent); border-color: var(--accent); color: #06121f; }
+    .cta-primary:hover { background: #8cc4ff; border-color: #8cc4ff; color: #06121f; }
+    .cta-ghost { background: transparent; color: var(--text); }
+    .cta-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-custom { border: 1px solid var(--accent); color: var(--accent); border-radius: 10px; padding: 10px 22px; }
+    .btn-custom::before { display: none; }
+    .btn-custom:hover { background: var(--accent); color: #06121f; box-shadow: none; }
+
+    /* Hero */
+    .hero { padding: 150px 20px 90px; min-height: 100vh; display: flex; align-items: center;
+      background: radial-gradient(900px 500px at 85% 20%, rgba(90,169,255,0.10), transparent 60%), var(--bg); }
+    .hero-grid { display: grid; grid-template-columns: 1.4fr 0.8fr; gap: 56px; align-items: center; }
+    .eyebrow { color: var(--accent); font-weight: 500; font-size: 0.9rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 18px; }
+    .hero h1 { font-size: 3rem; line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 22px; }
+    .hero h1 .accent { color: var(--accent); }
+    .lead-text { color: var(--muted); font-size: 1.1rem; line-height: 1.7; max-width: 620px; margin-bottom: 30px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 44px; }
+    .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding-top: 28px; border-top: 1px solid var(--border); }
+    .stat-num { display: block; font-size: 1.9rem; font-weight: 700; color: var(--text); line-height: 1.1; }
+    .stat-lbl { display: block; margin-top: 6px; font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+    .hero-photo { width: 100%; max-width: 380px; aspect-ratio: 4 / 5; justify-self: center; border-radius: 24px; border: 1px solid var(--border);
+      background: url('WhatsApp Image 2025-05-21 at 12.33.14.jpeg') 50% 6% / auto 135% no-repeat; box-shadow: 0 30px 60px rgba(0,0,0,0.45); }
+
+    /* Cards */
+    .timeline-content, .achievement-card, .project-card { background: var(--surface); border: 1px solid var(--border); border-left: 1px solid var(--border); border-radius: 14px; box-shadow: none; }
+    .timeline-content:hover, .achievement-card:hover, .project-card:hover { background: var(--surface-2); border-color: var(--accent); transform: none; box-shadow: none; }
+    .achievement-card.featured:hover { transform: none; }
+    .project-card::before { display: none; }
+    .timeline-item { animation: none; opacity: 1; transform: none; margin-bottom: 24px; }
+    .timeline-title, .achievement-title, .project-title { color: var(--text); font-weight: 600; }
+    .timeline-company { color: var(--accent); font-size: 1rem; }
+    .timeline-date { color: var(--muted); }
+    .timeline-content li::before { color: var(--accent); }
+    .timeline-content li { color: #c5cfd9; }
+    .achievement-card p, .achievement-desc, .project-card p { color: #b7c2cd; }
+
+    /* Skills */
+    .skill-groups { display: grid; gap: 14px; }
+    .skill-row { display: grid; grid-template-columns: 210px 1fr; gap: 20px; align-items: start; padding: 18px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+    .skill-label { font-weight: 600; color: var(--text); font-size: 0.95rem; padding-top: 5px; }
+    .skill-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { padding: 5px 14px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border); color: #c5cfd9; font-size: 0.85rem; }
+
+    /* Projects */
+    .projects-grid { gap: 20px; margin-top: 0; }
+    .featured-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .project-card { padding: 26px; display: flex; flex-direction: column; }
+    .project-card.featured { border-top: 3px solid var(--accent); }
+    .project-title { font-size: 1.15rem; margin-bottom: 10px; }
+    .project-tech { margin-top: auto; padding-top: 14px; }
+    .tech-badge { background: transparent; border: 1px solid var(--border); color: var(--muted); font-size: 0.78rem; }
+    .project-link { display: inline-block; margin-top: 16px; font-weight: 600; font-size: 0.9rem; }
+
+    /* Contact */
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    @media (max-width: 900px) {
+      .hero { padding-top: 110px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-photo { order: -1; max-width: 220px; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .skill-row { grid-template-columns: 1fr; gap: 10px; }
+      .nav-resume { margin: 10px 0 0; }
+    }
   </style>
 </head>
 <body>
@@ -778,7 +886,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="#">HIMANSHI SHRIVAS</a>
+      <a class="navbar-brand" href="#home">Himanshi Shrivas</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -790,51 +898,36 @@
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-resume" href="Himanshi_Shrivas_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section" id="home" >
-    <div class="hero-overlay"></div>
-    <div class="hero-content" >
-
-      <h1>Himanshi Shrivas</h1>
-      <p class="tagline">Software Engineer & Full-Stack Developer</p>
-      <p class="subtitle">Results-driven engineer with 3+ years of experience building scalable, high-performance applications using Java, Spring Boot, and cloud-native architectures. Passionate about innovation in healthcare, AI, and distributed systems.</p>
-      
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-number">3+</span>
-          <span class="stat-label">Years Experience</span>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Software Engineer · Charlotte, USA</p>
+          <h1>I build production <span class="accent">AI agents</span> and reliable distributed systems.</h1>
+          <p class="lead-text">3+ years shipping Java/Spring Boot microservices at Capgemini, now building multi-agent LLM systems at Touio (Ginjer AI). Teaching Assistant and MS IT student at UNC Charlotte.</p>
+          <div class="cta-row">
+            <a href="Himanshi_Shrivas_Resume.pdf" target="_blank" rel="noopener" class="cta cta-primary">Download Resume</a>
+            <a href="#projects" class="cta cta-ghost">View Work</a>
+            <a href="#contact" class="cta cta-ghost">Contact</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat"><span class="stat-num">~80%</span><span class="stat-lbl">faster incident triage across 60+ microservices</span></div>
+            <div class="stat"><span class="stat-num">30%</span><span class="stat-lbl">lower MTTR via observability &amp; alerting</span></div>
+            <div class="stat"><span class="stat-num">85%+</span><span class="stat-lbl">test coverage enforced with SonarQube</span></div>
+            <div class="stat"><span class="stat-num">1st</span><span class="stat-lbl">IEEE Pitch Competition, Georgia Tech</span></div>
+          </div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number">15+</span>
-          <span class="stat-label">Projects Worked</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">100+</span>
-          <span class="stat-label">Students Mentored</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">15%</span>
-          <span class="stat-label">Reduced Deployment Errors</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">12%</span>
-          <span class="stat-label">Improved Resource Allocation</span>
-        </div>
+        <div class="hero-photo" role="img" aria-label="Portrait of Himanshi Shrivas"></div>
       </div>
-
-      <div class="cta-buttons">
-        <a href="#contact" class="btn btn-custom">Get In Touch</a>
-        <a href="#projects" class="btn btn-custom">View Projects</a>
-      </div>
-        </div>
-      </section>
-
- 
+    </div>
+  </section>
 
   <!-- Experience Section -->
   <section class="section" id="experience">
@@ -916,196 +1009,93 @@
   <section class="section" id="skills">
     <div class="container">
       <h2>Technical Skills</h2>
-      <p class="section-subtitle">Comprehensive expertise across modern development stacks and cloud technologies</p>
-      
-      <div class="skills-grid">
-        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
-          <span>Java</span>
+      <p class="section-subtitle">Grouped by what I use them for, strongest areas first</p>
+      <div class="skill-groups">
+        <div class="skill-row">
+          <div class="skill-label">AI &amp; LLM</div>
+          <div class="skill-chips"><span class="chip">Agentic AI</span><span class="chip">RAG</span><span class="chip">Multi-agent orchestration</span><span class="chip">Function calling</span><span class="chip">Databricks</span><span class="chip">IBM Watson</span><span class="chip">XGBoost / scikit-learn</span></div>
         </div>
-        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
-          <span>Python</span>
+        <div class="skill-row">
+          <div class="skill-label">Languages</div>
+          <div class="skill-chips"><span class="chip">Java</span><span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">SQL</span></div>
         </div>
-        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
-          <span>SQL</span>
+        <div class="skill-row">
+          <div class="skill-label">Backend</div>
+          <div class="skill-chips"><span class="chip">Spring Boot</span><span class="chip">Node.js</span><span class="chip">Django</span><span class="chip">REST APIs</span><span class="chip">GraphQL</span><span class="chip">Microservices</span></div>
         </div>
-        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
-          <span>JavaScript</span>
+        <div class="skill-row">
+          <div class="skill-label">Frontend</div>
+          <div class="skill-chips"><span class="chip">React</span><span class="chip">Angular</span></div>
         </div>
-        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
-          <span>Spring Boot</span>
+        <div class="skill-row">
+          <div class="skill-label">Data</div>
+          <div class="skill-chips"><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">Tableau</span></div>
         </div>
-        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
-          <span>Django</span>
+        <div class="skill-row">
+          <div class="skill-label">Cloud &amp; DevOps</div>
+          <div class="skill-chips"><span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">Jenkins</span><span class="chip">Harness</span><span class="chip">Git</span></div>
         </div>
-        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
-          <span>React</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
-          <span>REST APIs</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
-          <span>MySQL</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
-          <span>MongoDB</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
-          <span>PostgreSQL</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
-          <span>AWS</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
-          <span>Jenkins</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
-          <span>Docker</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
-          <span>Kubernetes</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
-          <span>Harness</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
-          <span>Git</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
-          <span>Tableau</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
-          <span>Splunk</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
-          <span>AppDynamics</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
-          <span>Postman</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
-          <span>SonarQube</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #00f2fe; animation: glow 1.5s infinite alternate;">
-          <span>Databricks</span>
-        </div>
-        <div class="skill-card" style="border: 2px solid #4facfe; animation: glow 1.5s infinite alternate;">
-          <span>IBM Watson</span>
+        <div class="skill-row">
+          <div class="skill-label">Observability &amp; Testing</div>
+          <div class="skill-chips"><span class="chip">Splunk</span><span class="chip">Grafana</span><span class="chip">AppDynamics</span><span class="chip">CloudWatch</span><span class="chip">SonarQube</span><span class="chip">JUnit / Mockito</span><span class="chip">Postman</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <style>
-    @keyframes glow {
-      0% {
-        box-shadow: 0 0 3px #00f2fe, 0 0 6px #00f2fe, 0 0 10px #00f2fe;
-      }
-      100% {
-        box-shadow: 0 0 5px #4facfe, 0 0 10px #4facfe, 0 0 15px #4facfe;
-      }
-    }
-  </style>
-
   <!-- Projects Section -->
   <section class="section" id="projects">
     <div class="container">
       <h2>Featured Projects</h2>
-      <p class="section-subtitle">Innovative solutions spanning healthcare, DevOps automation, Employee Performance , Projects utilizing AI capabilities via Agentic AI systems</p>
+      <p class="section-subtitle">Agentic AI, healthcare and fintech platforms, and DevOps automation</p>
       
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-title">Predictive Healthcare Passport</div>
-          <p>Built ML models (XGBoost, Random Forest) to predict multi-disease health risk with over 90% accuracy. Developed a GenAI-based health recommendation module and deployed via Gradio web app for accessible health insights.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Scikit-learn</span>
-            <span class="tech-badge">XGBoost</span>
-            <span class="tech-badge">Gradio</span>
+      <div class="projects-grid featured-grid">
+          <div class="project-card featured">
+            <div class="project-title">Careless — AI Health + Fintech Platform</div>
+            <p>3rd Place Overall at Pearl Hacks 2026 and Fidelity 2nd (Best Hack for Finance for All). Brings proactive clarity to healthcare costs before visits, after claims, and across financial planning, with community-backed support through blockchain.</p>
+            <div class="project-tech"><span class="tech-badge">AI</span><span class="tech-badge">Health + Fintech</span><span class="tech-badge">Solana</span></div>
+            <a href="https://www.youtube.com/watch?v=rIINrF1Fefc" target="_blank" rel="noopener" class="project-link">▶ Watch demo</a>
           </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-title">Employee Performance Dashboard</div>
-          <p>Automated KPI tracking using Jira Analytics, visualizing sprint velocity and SLA adherence. Delivered actionable insights on team productivity, enabling data-driven sprint planning and optimized resource allocation.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Tableau</span>
-            <span class="tech-badge">Jira Analytics</span>
-            <span class="tech-badge">Data Visualization</span>
+          <div class="project-card featured">
+            <div class="project-title">Agentic RAG for IEEE Skill-Gap Remediation</div>
+            <p>1st Place at the IEEE Pitch Competition (Georgia Tech). Ingests multi-source developer data, analyzes skill gaps against live industry demand, and retrieves tailored learning paths, standards, and mentor matches from IEEE assets.</p>
+            <div class="project-tech"><span class="tech-badge">Agentic AI</span><span class="tech-badge">RAG</span><span class="tech-badge">LLM</span></div>
           </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-title">Automated Deployment System</div>
-          <p>Conducted research case study on CI/CD automation, evaluating Jenkins and Harness integration with AWS. Designed pipeline prototypes demonstrating automated build, test, and deployment workflows with significant efficiency gains.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Jenkins</span>
-            <span class="tech-badge">Harness</span>
-            <span class="tech-badge">AWS</span>
-            <span class="tech-badge">CI/CD</span>
-          </div>
-        </div>
-
-
-        <div class="project-card">
-          <div class="project-title">SchoolDaddy</div>
+          <div class="project-card featured">
+            <div class="project-title">SchoolDaddy</div>
             <p>Smart school management platform simplifying communication between teachers, students, and parents. Features attendance tracking, assignment management, and performance analytics for better academic engagement.</p>
-            <div class="project-tech">
-              <span class="tech-badge">Databricks</span>
-              <span class="tech-badge">Agentic AI System</span>
-              <span class="tech-badge">LLM</span>
-              <span class="tech-badge">RAG-Databrick</span>
-            </div>
-        </div>
-
-    
-
-        <div class="project-card">
-          <div class="project-title">OneHealth Network Portal</div>
-          <p>Healthcare portal with multi-role login and dynamic dashboards. Streamlined patient management and provider collaboration with secure data handling and real-time updates.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Django</span>
-            <span class="tech-badge">MongoDB</span>
-            <span class="tech-badge">Healthcare IT</span>
+            <div class="project-tech"><span class="tech-badge">Databricks</span><span class="tech-badge">Agentic AI System</span><span class="tech-badge">LLM</span><span class="tech-badge">RAG-Databrick</span></div>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-title">Online Food Delivery App</div>
-          <p>Full-stack application with optimized backend APIs and efficient data management. Implemented user authentication, order processing, and real-time tracking features.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Spring Boot</span>
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">MySQL</span>
-          </div>
-        </div>
-      
-
-       <div class="project-card">
-         <div class="project-title">MindMe AI</div>
-         <p>In Progress-AI-powered wellness platform that analyzes daily activities and physiological signals from wearables to predict mindfulness and mental wellness levels. Includes real-time feedback and personalized insights.</p>
-        <div class="project-tech">
-          <span class="tech-badge">Embedded learning</span>
-          <span class="tech-badge">TensorFlow</span>
-          <span class="tech-badge">Python</span>
-        
-        </div>
-      </div>
-
+        <h3 class="subhead">More Projects</h3>
+        <div class="projects-grid">
           <div class="project-card">
-          <div class="project-title">Distributed Task Scheduler</div>
-          <p>Intial Stages- Planned distributed task scheduling system handling asynchronous jobs across worker nodes, improving throughput by 200%. Leveraged Redis as message queue for scalable, fault-tolerant processing with retries and idempotency.</p>
-          <div class="project-tech">
-            <span class="tech-badge">Java</span>
-            <span class="tech-badge">Spring Boot</span>
-            <span class="tech-badge">Redis</span>
-            <span class="tech-badge">PostgreSQL</span>
-            <span class="tech-badge">Docker</span>
+            <div class="project-title">Predictive Healthcare Passport</div>
+            <p>Built ML models (XGBoost, Random Forest) to predict multi-disease health risk with over 90% accuracy. Developed a GenAI-based health recommendation module and deployed via Gradio web app for accessible health insights.</p>
+            <div class="project-tech"><span class="tech-badge">Python</span><span class="tech-badge">Scikit-learn</span><span class="tech-badge">XGBoost</span><span class="tech-badge">Gradio</span></div>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Employee Performance Dashboard</div>
+            <p>Automated KPI tracking using Jira Analytics, visualizing sprint velocity and SLA adherence. Delivered actionable insights on team productivity, enabling data-driven sprint planning and optimized resource allocation.</p>
+            <div class="project-tech"><span class="tech-badge">Tableau</span><span class="tech-badge">Jira Analytics</span><span class="tech-badge">Data Visualization</span></div>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Automated Deployment System</div>
+            <p>Conducted research case study on CI/CD automation, evaluating Jenkins and Harness integration with AWS. Designed pipeline prototypes demonstrating automated build, test, and deployment workflows with significant efficiency gains.</p>
+            <div class="project-tech"><span class="tech-badge">Jenkins</span><span class="tech-badge">Harness</span><span class="tech-badge">AWS</span><span class="tech-badge">CI/CD</span></div>
+          </div>
+          <div class="project-card">
+            <div class="project-title">OneHealth Network Portal</div>
+            <p>Healthcare portal with multi-role login and dynamic dashboards. Streamlined patient management and provider collaboration with secure data handling and real-time updates.</p>
+            <div class="project-tech"><span class="tech-badge">Django</span><span class="tech-badge">MongoDB</span><span class="tech-badge">Healthcare IT</span></div>
+          </div>
+          <div class="project-card">
+            <div class="project-title">Online Food Delivery App</div>
+            <p>Full-stack application with optimized backend APIs and efficient data management. Implemented user authentication, order processing, and real-time tracking features.</p>
+            <div class="project-tech"><span class="tech-badge">Spring Boot</span><span class="tech-badge">React</span><span class="tech-badge">MySQL</span></div>
           </div>
         </div>
-    </div>
-
-
-
     </div>
   </section>
 
@@ -1163,7 +1153,7 @@
         </div>
       </div>
 
-      <h3 class="mt-5 mb-4 text-center" style="color: #4facfe; font-size: 2rem;">Certifications</h3>
+      <h3 class="mt-5 mb-4 text-center" class="subhead">Certifications</h3>
       
       <div class="row">
         <div class="col-md-4">
@@ -1209,7 +1199,7 @@
         </div>
       </div>
 
-      <h3 class="mt-5 mb-4 text-center" style="color: #4facfe; font-size: 2rem;">Professional Training</h3>
+      <h3 class="mt-5 mb-4 text-center" class="subhead">Professional Training</h3>
       
       <div class="row">
         <div class="col-md-4">
@@ -1241,13 +1231,13 @@
         </div>
       </div>
 
-      <h3 class="mt-5 mb-4 text-center" style="color: #4facfe; font-size: 2rem;">Research Ongoing</h3>
+      <h3 class="mt-5 mb-4 text-center" class="subhead">Research Ongoing</h3>
       <p class="section-subtitle">Towards research paper</p>
       
       <div class="row">
         <div class="col-md-12">
-          <div class="achievement-card" style="border-left-color: #00f2fe;">
-            <div class="achievement-title" style="color: #00f2fe;">🧠 Multimodal Neural Signal Processing & Deep Learning Pipeline (In Progress)</div>
+          <div class="achievement-card" >
+            <div class="achievement-title" >🧠 Multimodal Neural Signal Processing & Deep Learning Pipeline (In Progress)</div>
             <ul style="margin-top: 15px; padding-left: 20px;">
               <li style="margin-bottom: 12px; line-height: 1.6;">Building an end-to-end ML pipeline for EEG (32-channel) and fNIRS data, benchmarking 8+ imputation algorithms (matrix completion, tensor decomposition) to address missing neural signals.</li>
               <li style="margin-bottom: 12px; line-height: 1.6;">Engineering temporal, spectral, and spatial features from multimodal neural data for cognitive state classification; applying statistical analysis and data visualization to evaluate signal quality.</li>
@@ -1267,56 +1257,37 @@
       
       <div class="row">
         <div class="col-md-6 d-flex">
-          <div class="achievement-card flex-fill" style="border-left-color: #00f2fe;">
-        <div class="achievement-title" style="color: #00f2fe;">🎓 Master of Science in Information Technology</div>
+          <div class="achievement-card flex-fill" >
+        <div class="achievement-title" >🎓 Master of Science in Information Technology</div>
         <p><strong>University of North Carolina at Charlotte</strong><br>
         Charlotte, NC | Jan 2025 – Dec 2026<br>
         Focus: Advanced software engineering, cloud computing, and data analytics</p>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="achievement-card" style="border-left-color: #00f2fe;">
-        <div class="achievement-title" style="color: #00f2fe;">🎓 Bachelor of Technology in Computer Science</div>
+          <div class="achievement-card" >
+        <div class="achievement-title" >🎓 Bachelor of Technology in Computer Science</div>
         <p><strong>Shri Vaishnav Vidyapeeth Vishwavidyalaya</strong><br>
         Indore, India | Jul 2017 – Aug 2021<br>
         Focus: Computer Science, Specialization in Big Data Analytics in collaboration by IBM</p>
           </div>
         </div>
       </div>
-      <section class="section" id="contact">
-        <div class="container">
-          <h2>Get In Touch</h2>
-          <p class="section-subtitle">Feel free to reach out for collaborations or inquiries</p>
-          
-          <div class="contact-grid">
-        <div class="contact-card">
-          <div class="contact-icon">📞</div>
-          <div class="contact-label">Phone</div>
-          <div class="contact-value">7042931718</div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">✉️</div>
-          <div class="contact-label">Email</div>
-            <div class="contact-value"><a href="mailto:hshrivas0007@gmail.com">hshrivas0007@gmail.com</a></div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">🐱‍💻</div>
-          <div class="contact-label">GitHub</div>
-          <div class="contact-value"><a href="https://github.com/darpan02-cypher" target="_blank">github.com/darpan02-cypher</a></div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">🔗</div>
-          <div class="contact-label">LinkedIn</div>
-          <div class="contact-value"><a href="https://www.linkedin.com/in/himanshishrivas" target="_blank">linkedin.com/in/himanshishrivas</a></div>
-        </div>
-        <div class="contact-card">
-          <div class="contact-icon">📝</div>
-          <div class="contact-label">Medium</div>
-          <div class="contact-value"><a href="https://medium.com/@himanshishrvs0007" target="_blank">medium.com/@himanshishrvs0007</a></div>
-        </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2>Let's Talk</h2>
+      <p class="section-subtitle">Open to software engineering and AI engineering roles. The fastest way to reach me is email.</p>
+      <div class="contact-actions">
+        <a href="mailto:hshrivas0007@gmail.com" class="cta cta-primary">Email Me</a>
+        <a href="Himanshi_Shrivas_Resume.pdf" target="_blank" rel="noopener" class="cta cta-ghost">Download Resume</a>
+        <a href="https://www.linkedin.com/in/himanshishrivas" target="_blank" rel="noopener" class="cta cta-ghost">LinkedIn</a>
+        <a href="https://github.com/darpan02-cypher" target="_blank" rel="noopener" class="cta cta-ghost">GitHub</a>
+        <a href="https://medium.com/@himanshishrvs0007" target="_blank" rel="noopener" class="cta cta-ghost">Medium</a>
       </div>
-        </div>
-      </section>
     </div>
   </section>
 
