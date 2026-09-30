@@ -892,7 +892,10 @@
 
     /* Projects */
     .projects-grid { gap: 20px; margin-top: 0; }
-    .featured-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .featured-grid { grid-template-columns: repeat(2, 1fr); }
+    .project-links { display: flex; gap: 22px; }
+    .project-links .project-link { margin-top: 16px; }
+    @media (max-width: 700px) { .featured-grid { grid-template-columns: 1fr; } }
     .project-card { padding: 26px; display: flex; flex-direction: column; }
     .project-card.featured { border-top: 3px solid var(--accent); }
     .project-title { font-size: 1.15rem; margin-bottom: 10px; }
@@ -1103,6 +1106,15 @@
             <p>3rd Place Overall at Pearl Hacks 2026 and Fidelity 2nd (Best Hack for Finance for All). Brings proactive clarity to healthcare costs before visits, after claims, and across financial planning, with community-backed support through blockchain.</p>
             <div class="project-tech"><span class="tech-badge">AI</span><span class="tech-badge">Health + Fintech</span><span class="tech-badge">Solana</span></div>
             <a href="https://www.youtube.com/watch?v=rIINrF1Fefc" target="_blank" rel="noopener" class="project-link">▶ Watch demo</a>
+          </div>
+          <div class="project-card featured">
+            <div class="project-title">NeuroSigns: Cloud Analytics for Precision Psychiatry</div>
+            <p>Distributed Spark pipeline that turns neuroimaging and clinical data into 4,950+ predictive features per patient, with MLlib models forecasting neurofeedback treatment outcomes and Streamlit dashboards for near real-time analytics.</p>
+            <div class="project-tech"><span class="tech-badge">Apache Spark</span><span class="tech-badge">MLlib</span><span class="tech-badge">Streamlit</span><span class="tech-badge">Python</span></div>
+            <div class="project-links">
+              <a href="https://drive.google.com/file/d/1Sov3TGoebjrYLzSXn5RpJVzS8Hp3COr8/view?usp=sharing" target="_blank" rel="noopener" class="project-link">▶ Watch demo</a>
+              <a href="https://neurosigns.onrender.com/" target="_blank" rel="noopener" class="project-link">↗ Live app</a>
+            </div>
           </div>
           <div class="project-card featured">
             <div class="project-title">Agentic RAG for IEEE Skill-Gap Remediation</div>
